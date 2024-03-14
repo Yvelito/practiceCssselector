@@ -5,6 +5,7 @@ body {
 
 
 
+
 h2,
 h3,
 h4,
@@ -64,11 +65,36 @@ nav a {
  h1 {
     text-align: center;
     font-family: Tahoma, Arial, sans-serif;
-    color: gray; 
-    margin: 50px 0;
+    color: rgba(27, 159, 80, 0.362); 
+    margin: 20px 0;
+    position: relative;
+    font-size: 5vw;
+    -webkit-text-stroke: 0.3vw gray; 
+    text-transform: uppercase;
   }
   
- .container{
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: aqua;
+    -webkit-text-stroke: gray;
+    border-right: aqua;
+    overflow: hidden;
+    animation: animate 6% linear infinite;
+}
+
+
+
+
+ 
+ 
+ 
+ 
+  .container{
     padding: 2rem;
  }
 .slider-wrapper{
@@ -153,9 +179,12 @@ nav a {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, gray 0, bisque 100%);
-    
+    background: linear-gradient(180deg, rgba(128, 128, 128, 0.348) 0, bisque 100%);
+    justify-content: flex-start;
 }
+
+
+
 .sidebarMenuInner{
     margin:0;
     padding:0;
@@ -254,8 +283,3 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 
   
-  
-  
-  
-  
-
